@@ -100,9 +100,9 @@ We can also install it via kustomize using `kubectl apply -k deploy/yamls`, chec
 
 - For `microk8s`, we need to change the kubelet directory to `/var/snap/microk8s/common/var/lib/kubelet/`, we need to replace `/var/lib/kubelet/` with `/var/snap/microk8s/common/var/lib/kubelet/` at all the places in the operator yaml and then we can apply it on microk8s.
 
-- For `k0s`, the default directory (`/var/lib/kubelet`) should be changed to `/var/lib/k0s/kubelet`.
+- For `k0s`, the default directory (`/var/lib/kubelet/`) should be changed to `/var/lib/k0s/kubelet/`.
 
-- For `RancherOS`, the default directory (`/var/lib/kubelet`) should be changed to `/opt/rke/var/lib/kubelet`.
+- For `RancherOS`, the default directory (`/var/lib/kubelet/`) should be changed to `/opt/rke/var/lib/kubelet/`.
 
 Verify that the ZFS driver Components are installed and running using below command :
 
